@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/home.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+  <title>Welcome to the country list</title>
+</head>
+
+<body>
+
+
+  <%- include('header'); -%>
+
+
+  <main>
+    <div class="input-search">
+      <div class="left-input">
+        <form action="/searchCountry" method="post">
+          <input type="text" name="countryName" placeholder="Search for a country">
+        </form>
+
+      </div>
+
+      <div class="right-input">
+        <form action="/" method="post">
+          <select name="regionName" onchange="this.form.submit()">
+            <option disabled selected hidden>Select your option</option>
+            <option value="africa">Africa</option>
+            <option value="america">America</option>
+            <option value="asia">Asia</option>
+            <option value="europe">Europe</option>
+            <option value="oceania">Oceania</option>
+          </select>
+        </form>
+      </div>
+    </div>
+
+    <div class="main-content">
+
+
+
+      <% if(countryName.length <= 4){ %>
+      <div class="row1">
+
+        <% for(let i = 0; i<countryName.length; i++){ %>
+        <div class="country">
+          <img class="country-flag" src=<%= countryFlag[i] %> alt="Country Flags">
+          <div class="country-description">
+            <h3><%= countryName[i] %></h3>
+            <p>Population: <%= countryPopulation[i] %></p>
+            <p>Region: <%= countryRegion[i] %></p>
+            <p>Capital: <%= countryCapital[i] %></p>
+          </div>
+        </div>
+        <% } %>
+
+      </div>
+
+      <% } else{ %>
+      <div class="row1">
+
+        <% for(let i = 0; i<4; i++){ %>
+        <div class="country">
+          <img class="country-flag" src=<%= countryFlag[i] %> alt="Country Flags">
+          <div class="country-description">
+            <h3><%= countryName[i] %></h3>
+            <p>Population: <%= countryPopulation[i] %></p>
+            <p>Region: <%= countryRegion[i] %></p>
+            <p>Capital: <%= countryCapital[i] %></p>
+          </div>
+        </div>
+        <% } %>
+
+
+      </div>
+
+      <div class="row2">
+
+        <% for(let i = 4; i<countryName.length; i++){ %>
+        <div class="country">
+          <img class="country-flag" src=<%= countryFlag[i] %> alt="Country Flags">
+          <div class="country-description">
+            <h3><%= countryName[i] %></h3>
+            <p>Population: <%= countryPopulation[i] %></p>
+            <p>Region: <%= countryRegion[i] %></p>
+            <p>Capital: <%= countryCapital[i] %></p>
+          </div>
+        </div>
+        <% } %>
+
+      </div>
+      <% } %>
+
+
+
+    </div>
+
+
+
+  </main>
+
+
+</body>
+
+</html>
