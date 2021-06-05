@@ -1,0 +1,33 @@
+@media all and (min-width: 1440px) {
+  .country {
+    width: 100% !important;
+    margin: 2rem 2rem 5rem 2rem !important;
+    max-width: 328px;
+  }
+
+  .row1, .row2 {
+    justify-content: center;
+  }
+
+  .back-button {
+    width: 100%;
+    position: relative;
+    left: 2.6%;
+  }
+
+  .back-button button {
+    padding: 1rem 3rem;
+  }
+}
+
+@media all and (min-width: 1590px) {
+  .back-button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .back-button button {
+    position: relative;
+    right: 45.6rem;
+  }
+}
