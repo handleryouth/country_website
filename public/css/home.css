@@ -5,6 +5,20 @@ body {
   margin: 0;
 }
 
+
+.white-background{
+  background-color:white !important;
+}
+
+.white-shadow{
+  background-color:white !important;
+  box-shadow: -1px -1px 20px -5px rgba(0, 0, 0, 0.76);
+}
+
+.shadow{
+  box-shadow: -1px -1px 20px -5px rgba(0, 0, 0, 0.76);
+}
+
 /*for input*/
 .navbar {
   display: flex;
@@ -19,6 +33,15 @@ body {
   text-decoration: none;
   color: #fff;
 }
+
+.black{
+  color: hsl(209, 23%, 22%) !important;
+}
+
+.moon-icon{
+  margin-right: 0.5rem;
+}
+
 
 .input-search {
   margin: 1rem;

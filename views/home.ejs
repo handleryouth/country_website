@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/home.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
   <title>Welcome to the country list</title>
 </head>
@@ -20,14 +21,14 @@
     <div class="input-search">
       <div class="left-input">
         <form action="/searchCountry" method="post">
-          <input type="text" name="countryName" placeholder="Search for a country">
+          <input class="input-column" type="text" name="countryName" placeholder="Search for a country">
         </form>
 
       </div>
 
       <div class="right-input">
         <form action="/" method="post">
-          <select name="regionName" onchange="this.form.submit()">
+          <select class="input-select" name="regionName" onchange="this.form.submit()">
             <option disabled selected hidden>Select your option</option>
             <option value="africa">Africa</option>
             <option value="americas">Americas</option>
@@ -103,7 +104,7 @@
 
   </main>
 
-
+<script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>
