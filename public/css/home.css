@@ -79,6 +79,22 @@ body {
   color: #fff;
 }
 
+.input-column-black-placeholder::placeholder{
+  color: hsl(209, 23%, 22%) !important;
+  opacity: 1;
+}
+
+.input-column-black-placeholder:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: hsl(209, 23%, 22%) !important;
+}
+
+.input-column-black-placeholder::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: hsl(209, 23%, 22%) !important;
+}
+
+
 .right-input select {
   width: 60%;
   height: 2.5rem;
